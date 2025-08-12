@@ -7,10 +7,11 @@
 
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: #f9f9f9;
-    color: #1c1c1c;
     line-height: 1.6;
+    background-color: #0c0c0c;
+    color: #d3d3d3;
+    font-family: "Fira Code", monospace;
+    padding-top: 10em;
 }
 
 
@@ -41,6 +42,10 @@ img {
     background-color: #000000;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 header {
     font-family: 'JetBrains Mono', monospace;
     display: flex;
@@ -48,6 +53,11 @@ header {
     align-items: center;
     min-height: 70px;
     background-color: #0D0D0D;
+    position: fixed;
+    top: 0;              /* Lo coloca en la parte superior */
+    left: 0;
+    width: 100%;         /* Que abarque todo el ancho */
+    z-index: 1000;       /* Lo pone por encima de otros elementos */
     /*padding: 1.5rem 0;*/
 }
 
@@ -126,6 +136,140 @@ main h2 {
     color: #007B83;
 }
 
+
+
+@media (min-width: 600px){
+    header{
+        flex-direction: column;
+        padding: 0px 30px;
+        justify-content: space-between;
+    }
+}
+
+/*Estilo ClienteServidor*/
+.seccion-clienteservidor {
+    padding: 2rem;
+}
+
+.clienteservidor-box {
+    display: flex;
+    gap: 2rem;
+    border: 1px solid #222;
+    padding: 1.5rem;
+    flex-direction: center ;
+}
+
+.clienteservidor-izq {
+    flex: 1;
+    color: #ccc;
+}
+
+.clienteservidor-der{
+    flex: 2;
+}
+
+.clienteservidor-der h4 {
+    color: #a8a887;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.clienteservidor-der strong {
+    color: #ffffff;
+}
+
+
+/*Estilo DiseñoUsuario*/
+.seccion-diseñousuario {
+    padding: 2rem;
+}
+
+.diseñousuario-box {
+    display: flex;
+    gap: 2rem;
+    border: 1px solid #222;
+    padding: 1.5rem;
+    flex-direction: row-reverse;
+}
+
+.diseñousuario-izq {
+    flex: 1;
+    color: #ccc;
+    display: flex; 
+    justify-content: right; 
+    align-items: center; 
+}
+
+.diseñousuario-izq img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.diseñousuario-der{
+    flex: 2;
+}
+
+.diseñousuario-der h4 {
+    color: #a8a887;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.diseñousuario-der strong {
+    color: #ffffff;
+}
+
+
+/*Estilo AnalisisEntorno*/
+.seccion-analisisentorno {
+    padding: 2rem;
+}
+
+.analisisentorno-box {
+    display: flex;
+    gap: 2rem;
+    border: 1px solid #222;
+    padding: 1.5rem;
+    flex-direction: center;
+}
+
+.analisisentorno-izq {
+    flex: 1;
+    color: #ccc;
+}
+
+.analisisentorno-izq img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0 60px 0 20px;
+    padding-top: 15px;
+}
+
+.analisisentorno-der {
+    flex: 2;
+}
+
+.analisisentorno-der h4 {
+    color: #a8a887;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.analisisentorno-der strong {
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
 /*.logo-title {
     display: flex;
     align-items: center;
@@ -135,10 +279,6 @@ main h2 {
     width: 50%;
     height: auto;
 }*/
-
-
-
-
 
 
 /*
@@ -167,12 +307,3 @@ footer {
     text-align: center;
     }
 }*/
-
-@media (min-width: 600px){
-    header{
-        flex-direction: column;
-        padding: 0px 30px;
-        justify-content: space-between;
-    }
-}
-
