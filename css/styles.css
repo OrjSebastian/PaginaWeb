@@ -99,6 +99,45 @@ nav a:hover {
     border-radius: 60px 70px 40px 140px;
 }
 
+.seccion-acerca:before, .seccion-acerca:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: glow 50s linear infinite;
+}
+.seccion-acerca:after {
+    filter: blur(30px);
+}
+@keyframes glow {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 500% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.seccion-acerca span{
+    font-family: "Spartan";
+    position:absolute;
+    font-size:30px;
+    top:50%;
+    left:50%;
+    transform: translate(-50% ,-50%);
+    color:#fff;
+    width:100%;
+    text-align:center;
+}
+
 .seccion-acerca h2 {
     font-size: 32px;
     margin-bottom: 20px;
